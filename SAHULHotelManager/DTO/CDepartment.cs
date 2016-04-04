@@ -9,10 +9,10 @@ namespace SAHULHotelManager.DTO
     class CDepartment
     {
         #region "Attribus"
-        private string ID;
-        private string Name;
-        private string DepartmentParentID;
-        private int Number;
+        private string ID;                      // mã bộ phận
+        private string Name;                    // tên bộ phận
+        private string DepartmentParentID;      // mã bộ phận cha
+        private int Number;                     // số nhân viên của bộ phận
         #endregion
 
         #region "Property"
