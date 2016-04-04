@@ -10,26 +10,26 @@ namespace SAHULHotelManager.DTO
     {
         #region "thuoc tinh"
         private string name;
-        private string area;
+        private float area;
         private string description;
         private int id;
-        private int price;
+        private double price;
         #endregion
         #region "khoi tao"
         public CRoomtype()
         {
-            this.name = string.Copy("");
-            this.area = string.Copy("");
-            this.description = string.Copy("");
+            this.name = "";
+            this.area = 0;
+            this.description = "";
             this.id = 0;
             this.price = 0;
         }
-        public CRoomtype(int id1, string name1, string area1, string description1, int price1)
+        public CRoomtype(int id1, string name1, float area1, string description1, double price1)
         {
             this.id = id1;
-            this.name = string.Copy(name1);
-            this.area = string.Copy(area1);
-            this.description = string.Copy(description1);
+            this.name = name1;
+            this.area = area1;
+            this.description = description1;
             this.price = price1;
         }
         #endregion
