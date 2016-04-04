@@ -12,7 +12,11 @@ namespace SAHULHotelManager.DTO
         private int orderId;
         private string title;
         private double price;
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 78ff00f2610cece504c36f6cc313f5697d464b6e
         public COrderLine()
         {
             this.id = 0;
@@ -20,7 +24,11 @@ namespace SAHULHotelManager.DTO
             this.title = "Unknown";
             this.price = 0;
         }
+<<<<<<< HEAD
         public COrderLine(int id, int orderId, string title, double price)
+=======
+        public COrderLine(int id,int orderId,string title,double price)
+>>>>>>> 78ff00f2610cece504c36f6cc313f5697d464b6e
         {
             this.id = id;
             this.orderId = orderId;
@@ -29,7 +37,16 @@ namespace SAHULHotelManager.DTO
         }
         public string ShowInfors()
         {
+<<<<<<< HEAD
             return id + "\t" + orderId + "\t" + title + "\t" + price;
         }
+=======
+           
+            return id+"\t" + orderId + "\t" + title + "\t" + price;
+        } 
+       
+
+>>>>>>> 78ff00f2610cece504c36f6cc313f5697d464b6e
     }
+    
 }
