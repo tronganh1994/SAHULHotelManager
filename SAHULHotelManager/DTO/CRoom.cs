@@ -9,26 +9,23 @@ namespace SAHULHotelManager.DTO
     class CRoom
     {
         #region "Atris"
-        private int IdRoom;
+        private int Id;
         private string roomTypeid;
-        private int number;
-        private double area;
-        private string status;
+        private int floor;
+        private int status;
         #endregion
 
         #region "Constructor"
         public CRoom()
         {
-            IdRoom = number = 0;
-            roomTypeid = status = "";
-            area = 0;
+            Id = floor = status = 0;
+            roomTypeid = "";
         }
-        public CRoom(int IDroom, string RoomTypeID, int Number, double Area, string Status)
+        public CRoom(int ID, string RoomTypeID, int Floor, int Status)
         {
-            IdRoom = IDroom;
+            Id = ID;
             roomTypeid = RoomTypeID;
-            number = Number;
-            area = Area;
+            floor = Floor;
             status = Status;
         }
         #endregion
@@ -36,7 +33,7 @@ namespace SAHULHotelManager.DTO
         #region "Method"
         public string ShowInfors()
         {
-            return ("\n ID: " + IdRoom + "\n type: " + roomTypeid + "\n number: " + number + "\n area : " + area + "\n stutus: " + area);
+            return ("\n ID: " + Id + "\n roomTypeid: " + roomTypeid + "\n floor: " + floor + "\n stutus: " + status);
         }
 
         #endregion
