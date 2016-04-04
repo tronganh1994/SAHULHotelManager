@@ -9,7 +9,44 @@ namespace SAHULHotelManager.DTO
     class CDepartment
     {
         #region "Attribus"
-        private int _id;
+        private string ID;
+        private string Name;
+        private string DepartmentParentID;
+        private int Number;
+        #endregion
+
+        #region "Property"
+        public new string ToString
+        {
+            get
+            {
+                return ID + "\t" + Name + "\t" + DepartmentParentID + "\t" + Number;
+            }
+        }
+        #endregion
+
+        #region "Constructor"
+        public CDepartment()
+        {
+            this.ID = "Unknow";
+            this.Name = "Unknow";
+            this.DepartmentParentID = "Unknow";
+            this.Number = 0;
+        }
+        public CDepartment(string ID, string Name, string DepartmantParentID, int Number)
+        {
+            this.ID = ID;
+            this.Name = Name;
+            this.DepartmentParentID = DepartmantParentID;
+            this.Number = Number;
+        }
+        #endregion
+
+        #region "Method"
+        public string ShowInFors()
+        {
+            return ID + "\t" + Name + "\t" + DepartmentParentID + "\t" + Number;
+        }
         #endregion
     }
 }
