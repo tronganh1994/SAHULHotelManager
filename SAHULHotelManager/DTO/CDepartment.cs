@@ -9,43 +9,33 @@ namespace SAHULHotelManager.DTO
     class CDepartment
     {
         #region "Attribus"
-        private string ID;                      // mã bộ phận
-        private string Name;                    // tên bộ phận
-        private string DepartmentParentID;      // mã bộ phận cha
-        private int Number;                     // số nhân viên của bộ phận
-        #endregion
-
-        #region "Property"
-        public new string ToString
-        {
-            get
-            {
-                return ID + "\t" + Name + "\t" + DepartmentParentID + "\t" + Number;
-            }
-        }
+        private int id;                               // mã bộ phận
+        private string name;                          // tên bộ phận
+        private int departmentParentid;               // mã bộ phận cha
+        private int number;                           // số nhân viên
         #endregion
 
         #region "Constructor"
         public CDepartment()
         {
-            this.ID = "Unknow";
-            this.Name = "Unknow";
-            this.DepartmentParentID = "Unknow";
-            this.Number = 0;
+            this.id = 0;
+            this.name = "Unknow";
+            this.departmentParentid = 0;
+            this.number = 0;
         }
-        public CDepartment(string ID, string Name, string DepartmantParentID, int Number)
+        public CDepartment(int id, string name, int departmantParentid, int number)
         {
-            this.ID = ID;
-            this.Name = Name;
-            this.DepartmentParentID = DepartmantParentID;
-            this.Number = Number;
+            this.id = id;
+            this.name = name;
+            this.departmentParentid = departmantParentid;
+            this.number = number;
         }
         #endregion
 
         #region "Method"
         public string ShowInFors()
         {
-            return ID + "\t" + Name + "\t" + DepartmentParentID + "\t" + Number;
+            return "\n ID: " + id + "\n Name: " + name + "\n Department Parent ID: " + departmentParentid + "\n Number: " + number;
         }
         #endregion
     }
