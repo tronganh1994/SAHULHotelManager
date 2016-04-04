@@ -8,5 +8,8 @@ namespace SAHULHotelManager.DTO
 {
     class CDepartment
     {
+        #region "Attribus"
+        private int _id;
+        #endregion
     }
 }
