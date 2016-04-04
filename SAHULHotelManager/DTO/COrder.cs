@@ -8,14 +8,14 @@ namespace SAHULHotelManager.DTO
 {
     class COrder
     {
-        public class order
+        public class corder
         {
             private int id;
             private DateTime createTime;
             private int status;
             private String guestld;
             private String employeeld;
-            public order()
+            public corder()
             {
                 id = 0;
                 DateTime createTime = DateTime.Now;
@@ -24,14 +24,14 @@ namespace SAHULHotelManager.DTO
                 employeeld = "nv1";
 
             }
-            public order(order a)
+            public corder(corder a)
             {
                 this.id = a.id;
                 this.createTime = a.createTime;
                 this.guestld = a.guestld;
                 this.employeeld = a.employeeld;
             }
-            public order(int id, DateTime createTime, int status, string guestld, string employeeld)
+            public corder(int id, DateTime createTime, int status, string guestld, string employeeld)
             {
                 this.id = id;
                 this.createTime = createTime;
