@@ -105,17 +105,18 @@ namespace SAHULHotelManager.DTO
         }
         public List<COrderLine> GenerateObjects()
         {
-            List<COrderLine> orderline = new List<COrderLine>(); 
-            COrderLine orderline1 = new COrderLine(1, 1, "Title 1", 20);orderline.Add(orderline1);
-            COrderLine orderline2 = new COrderLine(2, 2, "Title 2", 20); orderline.Add(orderline2);
-            COrderLine orderline3 = new COrderLine(3, 3, "Title 3", 30); orderline.Add(orderline3);
-            COrderLine orderline4 = new COrderLine(4, 4, "Title 4", 40); orderline.Add(orderline4);
-            COrderLine orderline5 = new COrderLine(5, 5, "Title 5", 50); orderline.Add(orderline5);
-            COrderLine orderline6 = new COrderLine(6, 6, "Title 6", 60); orderline.Add(orderline6);
-            COrderLine orderline7 = new COrderLine(7, 7, "Title 7", 70); orderline.Add(orderline7);
-            COrderLine orderline8 = new COrderLine(8, 8, "Title 8", 80); orderline.Add(orderline8);
-            COrderLine orderline9 = new COrderLine(9, 9, "Title 9", 90); orderline.Add(orderline9);
-            COrderLine orderline10 = new COrderLine(10,10, "Title 10", 10); orderline.Add(orderline10);
+            List<COrderLine> orderline = new List<COrderLine>();
+            orderline.Add(new COrderLine(1, 1, "Đặt Phòng", 20));
+            orderline.Add(new COrderLine(1, 1, "Đặt Phòng", 20));
+            orderline.Add(new COrderLine(2, 1, "Trả Phòng", 256));
+            orderline.Add(new COrderLine(3, 1, "Trả Phòng", 100));
+            orderline.Add(new COrderLine(4, 1, "Đặt Phòng", 5962));
+            orderline.Add(new COrderLine(5, 1, "Trả Phòng", 58));
+            orderline.Add(new COrderLine(6, 1, "Đặt Phòng", 2533));
+            orderline.Add(new COrderLine(7, 1, "Đặt Phòng", 70));
+            orderline.Add(new COrderLine(8, 1, "Trả Phòng", 1000));
+            orderline.Add(new COrderLine(9, 1, "Trả Phòng", 5000));
+            orderline.Add(new COrderLine(10, 1, "Đặt Phòng", 50)); 
             return orderline;
         }
         #endregion
