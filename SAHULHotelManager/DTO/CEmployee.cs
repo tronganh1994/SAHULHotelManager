@@ -8,35 +8,57 @@ namespace SAHULHotelManager.DTO
 {
     public class CEmployee : CPerson
     {
-        private int id;
-        private DateTime hireDate;
-        private int positionid;
-        private int departmentid;
-        private double basicsalary;
+        #region "Attributes"
+        private int _id;
+        private DateTime _hireDate;
+        private int _positionId;
+        private int _departmentId;
+        private double _basicSalary;
+        private float _ratio;
+        private int _status;
+        #endregion
 
-
+        #region "Constructor"
         public CEmployee() : base()
         {
-            this.id = 0;
-            this.hireDate = new DateTime(0000, 0, 0);
-            this.positionid = 0;
-            this.departmentid = 0;
-            this.basicsalary = 0;
+            this._id = 0;
+            this._hireDate = new DateTime(0000, 0, 0);
+            this._positionId = 0;
+            this._departmentId = 0;
+            this._basicSalary = 0;
+            this._ratio = 0;
+            this._status = 0;
         }
-        public CEmployee(string Name, int Age, int idcard, string address, int phone, string folk, DateTime dob, int id, DateTime hireDate, int positionid, int departmentid, double basicsalary) //:base(Name, Age, idcard, address, phone, folk, dob)
-        {
-            this.id = id;
-            this.hireDate = hireDate;
-            this.positionid = positionid;
-            this.departmentid = departmentid;
-            this.basicsalary = basicsalary;
-        }
+        /// <summary>
+        /// Name, Age, dob, idcard, address, phone, folk
 
-
-        public string ShowInfors()
+        public CEmployee(string name, int sex, DateTime doB, string idCard, string address, string phone, string folk, 
+                         int id, DateTime hireDate, int positionId, int departmentId, double basicSalary, float ratio, int status) 
+                         : base(name, sex, doB, idCard, address, phone, folk)
         {
-            base.ShowInfors();
-            return id + "\t" + hireDate + "\t" + positionid + "\t" + departmentid + "\t" + basicsalary;
+            this._id = id;
+            this._hireDate = hireDate;
+            this._positionId = positionId;
+            this._departmentId = departmentId;
+            this._basicSalary = basicSalary;
+            this._ratio = ratio;
+            this._status = status;
         }
+        #endregion
+
+        #region "Methods"
+        public new string ShowInfors()
+        {
+            return ""
+                + "Id: " + this._id + '\n'
+                + "Hire date: " + this._hireDate + '\n'
+                + "Position Id: " + this._positionId + '\n'
+                + "Department Id: " + this._departmentId + '\n'
+                + "Basic salary: " + this._basicSalary + '\n'
+                + "Ratio: " + this._ratio + '\n'
+                + "Status: " + this._status + '\n'
+                + base.ShowInfors();
+        }
+        #endregion
     }
 }
