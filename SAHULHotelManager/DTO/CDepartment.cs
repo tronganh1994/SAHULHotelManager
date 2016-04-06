@@ -6,36 +6,106 @@ using System.Threading.Tasks;
 
 namespace SAHULHotelManager.DTO
 {
-    class CDepartment
+    public class CDepartment
     {
         #region "Attribus"
-        private int id;                               // mã bộ phận
-        private string name;                          // tên bộ phận
-        private int departmentParentid;               // mã bộ phận cha
-        private int number;                           // số nhân viên
+        private int _id;                               // mã bộ phận
+        private string _name;                          // tên bộ phận
+        private int _departmentParentid;               // mã bộ phận cha
+        #endregion
+
+        #region "Property"
+        public new string ToString
+        {
+            get
+            {
+                return this.ShowInFors();
+            }
+        }
+
+        public int Id
+        {
+            get
+            {
+                return _id;
+            }
+
+            set
+            {
+                _id = value;
+            }
+        }
+
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+
+            set
+            {
+                _name = value;
+            }
+        }
+
+        public int DepartmentParentid
+        {
+            get
+            {
+                return _departmentParentid;
+            }
+
+            set
+            {
+                _departmentParentid = value;
+            }
+        }
         #endregion
 
         #region "Constructor"
         public CDepartment()
         {
-            this.id = 0;
-            this.name = "Unknow";
-            this.departmentParentid = 0;
-            this.number = 0;
+            this.Id = 0;
+            this.Name = String.Empty;
+            this.DepartmentParentid = 0;
         }
-        public CDepartment(int id, string name, int departmantParentid, int number)
+        public CDepartment(CDepartment CDepartment)
         {
-            this.id = id;
-            this.name = name;
-            this.departmentParentid = departmantParentid;
-            this.number = number;
+            this.Id = CDepartment.Id;
+            this.Name = CDepartment.Name;
+            this.DepartmentParentid = CDepartment.DepartmentParentid;
+        }
+
+        public CDepartment(int id, string name, int departmantParentid)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.DepartmentParentid = departmantParentid;
         }
         #endregion
 
-        #region "Method"
+        #region "Methods"
         public string ShowInFors()
         {
-            return "\n ID: " + id + "\n Name: " + name + "\n Department Parent ID: " + departmentParentid + "\n Number: " + number;
+            return "ID: " + Id + '\n'
+                   + "Name: " + Name + '\n'
+                   + "Department Parent ID: " + DepartmentParentid +'\n';
+        }
+        public List<CDepartment> GenerateObjects()
+        {
+            List<CDepartment> CDepartment = new List<CDepartment>();
+            CDepartment.Add(new CDepartment(1, "bộ phận giám đốc", 0));
+            CDepartment.Add(new CDepartment(2, "bộ phận kỹ thuật", 1));
+            CDepartment.Add(new CDepartment(3, "bộ phận đặt phòng", 1));
+            CDepartment.Add(new CDepartment(4, "bộ phận dọn phòng", 1));
+            CDepartment.Add(new CDepartment(5, "bộ phận tiền sảnh", 1));
+            CDepartment.Add(new CDepartment(6, "bộ phận nhà hàng và quầy uống", 1));
+            CDepartment.Add(new CDepartment(7, "bộ phận nhân sự", 1));
+            CDepartment.Add(new CDepartment(8, "bộ phận kế toán", 1));
+            CDepartment.Add(new CDepartment(9, "bộ phận hướng dẫn khách hàng", 1));
+            CDepartment.Add(new CDepartment(10, "bộ phận quan hệ khách hàng", 1));
+            return CDepartment;
         }
         #endregion
     }
